@@ -67,11 +67,11 @@ This project helps users:
 -Accepts JSON input like { "size": 1200, "bedrooms": 3 }
 -Predicts house price using scikit-learn
 
+---
+
 ## 🚀 Getting Started
 
 Follow these steps to get the project running on your local machine using Docker Compose.
-
----
 
 ### 1. Clone the Repository
 
