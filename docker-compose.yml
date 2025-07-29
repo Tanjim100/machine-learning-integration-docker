@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  ml-api:
+    build: ./ml-api
+    container_name: ml-api
+    ports:
+      - "8000:8000"
+    restart: always
+
+  node-api:
+    build: ./node-api
+    container_name: node-api
+    ports:
+      - "5001:5001"
+    depends_on:
+      - ml-api
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - node-api
+    restart: always
