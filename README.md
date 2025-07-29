@@ -87,3 +87,99 @@ cd price-predictor
 ```bash
 docker-compose up --build
 ```
+
+### 3. Open in Browser
+
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* Node API: [http://localhost:5001/api/predict](http://localhost:5001/api/predict)
+* ML API: [http://localhost:8000/predict](http://localhost:8000/predict)
+
+---
+
+## 🧪 Example Input
+
+```json
+{
+  "size": 1500,
+  "bedrooms": 3
+}
+```
+
+✅ Response:
+
+```json
+{
+  "predicted_price": 245000
+}
+```
+
+---
+
+## 📂 Folder Structure
+
+```
+project-root/
+├── docker-compose.yml
+├── ml-api/            # FastAPI + ML model
+│   ├── main.py
+│   ├── model.pkl
+│   └── Dockerfile
+├── node-api/          # Express server
+│   ├── server.js
+│   └── Dockerfile
+└── react-frontend/    # React frontend with Vite
+    ├── src/
+    └── Dockerfile
+```
+
+---
+
+## 📦 Tech Stack
+
+| Layer      | Technology                     |
+| ---------- | ------------------------------ |
+| Frontend   | React, Vite, Tailwind, DaisyUI |
+| Backend    | Node.js, Express, Axios        |
+| ML API     | Python, FastAPI, scikit-learn  |
+| Containers | Docker, Docker Compose         |
+
+---
+
+## 🧍 Who Is This For?
+
+* 🧑‍💻 **Developers**: Learn to connect ML to full-stack apps
+* 🧠 **Data Scientists**: See how to deploy models with FastAPI
+* 👤 **Non-Tech Users**: Get instant house price estimates
+
+---
+
+## 💡 Example Use Case
+
+> "I have a 1400 sq ft house with 3 bedrooms.
+> What’s the estimated market value?"
+
+This system provides an instant estimate powered by a real ML model.
+
+---
+
+## 🛠️ Troubleshooting
+
+* ❗ Ensure ports `3000`, `5001`, and `8000` are not blocked
+* 🔁 Use `docker-compose up --build` after code changes
+* 🐳 If you're not using Docker Compose, change `ml-api:8000` to `localhost:8000` in your Node.js code
+
+---
+
+## 🔮 Future Ideas
+
+* Add location & neighborhood factors
+* Show prediction confidence or error margin
+* Store input history in a database
+* User accounts & dashboards
+
+---
+
+## 🧑‍🎓 Credits
+
+Made with ❤️ by \[Tanjim Haider].
+
