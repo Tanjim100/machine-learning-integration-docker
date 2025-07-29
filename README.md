@@ -47,3 +47,46 @@ This project helps users:
 |  FastAPI ML Backend |
 | (localhost:8000)    | --> Returns price prediction
 +---------------------+
+
+🧠 How It Works
+1. Frontend – React + Tailwind + DaisyUI
+Built with Vite
+
+Uses React Router for routing
+
+Tailwind + DaisyUI for UI
+
+Calls backend /api/predict with house details
+
+2. Node.js Backend – Express
+Handles API route: /api/predict
+
+Forwards input to FastAPI ML service
+
+Returns the response to the frontend
+
+3. FastAPI – ML Model
+Loads a trained Linear Regression model (model.pkl)
+
+Accepts JSON input like { "size": 1200, "bedrooms": 3 }
+
+Predicts house price using scikit-learn
+
+🚀 Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/price-predictor.git
+cd price-predictor
+2. Build & Start with Docker Compose
+bash
+Copy
+Edit
+docker-compose up --build
+3. Open in Browser
+Frontend: http://localhost:3000
+
+Node API: http://localhost:5001/api/predict
+
+ML API: http://localhost:8000/predict
