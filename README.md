@@ -63,11 +63,13 @@ This project helps users:
 - Returns the response to the frontend
 
 ### 3. FastAPI – ML Model
--Loads a trained Linear Regression model (model.pkl)
--Accepts JSON input like { "size": 1200, "bedrooms": 3 }
--Predicts house price using scikit-learn
+- Loads a trained Linear Regression model (model.pkl)
+- Accepts JSON input like { "size": 1200, "bedrooms": 3 }
+- Predicts house price using scikit-learn
 
 ---
+
+
 
 ## 🚀 Getting Started
 
