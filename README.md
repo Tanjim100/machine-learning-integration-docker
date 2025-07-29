@@ -52,10 +52,10 @@ This project helps users:
 
 # 🧠 How It Works
 ## 1. Frontend – React + Tailwind + DaisyUI
--Built with Vite
--Uses React Router for routing
--Tailwind + DaisyUI for UI
--Calls backend /api/predict with house details
+- Built with Vite
+- Uses React Router for routing
+- Tailwind + DaisyUI for UI
+- Calls backend /api/predict with house details
 
 ## 2. Node.js Backend – Express
 -Handles API route: /api/predict
