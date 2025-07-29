@@ -48,45 +48,40 @@ This project helps users:
 | (localhost:8000)    | --> Returns price prediction
 +---------------------+
 
-🧠 How It Works
-1. Frontend – React + Tailwind + DaisyUI
-Built with Vite
+```
 
-Uses React Router for routing
+# 🧠 How It Works
+## 1. Frontend – React + Tailwind + DaisyUI
+-Built with Vite
+-Uses React Router for routing
+-Tailwind + DaisyUI for UI
+-Calls backend /api/predict with house details
 
-Tailwind + DaisyUI for UI
+## 2. Node.js Backend – Express
+-Handles API route: /api/predict
+-Forwards input to FastAPI ML service
+-Returns the response to the frontend
 
-Calls backend /api/predict with house details
+## 3. FastAPI – ML Model
+-Loads a trained Linear Regression model (model.pkl)
+-Accepts JSON input like { "size": 1200, "bedrooms": 3 }
+-Predicts house price using scikit-learn
 
-2. Node.js Backend – Express
-Handles API route: /api/predict
+# 🚀 Getting Started
 
-Forwards input to FastAPI ML service
+Follow these steps to get the project running on your local machine using Docker Compose.
 
-Returns the response to the frontend
+---
 
-3. FastAPI – ML Model
-Loads a trained Linear Regression model (model.pkl)
+## 1. Clone the Repository
 
-Accepts JSON input like { "size": 1200, "bedrooms": 3 }
-
-Predicts house price using scikit-learn
-
-🚀 Getting Started
-1. Clone the Repository
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/your-username/price-predictor.git
 cd price-predictor
-2. Build & Start with Docker Compose
-bash
-Copy
-Edit
+```
+
+## 2. Build & Start with Docker Compose
+
+```bash
 docker-compose up --build
-3. Open in Browser
-Frontend: http://localhost:3000
-
-Node API: http://localhost:5001/api/predict
-
-ML API: http://localhost:8000/predict
+```
